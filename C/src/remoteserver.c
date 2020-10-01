@@ -147,6 +147,12 @@ int main(int argc, char *argv[])
   /* Initialise GPIO */
   if (ControllerInit() < 0) return -1;
   setup_io();
+
+
+  carstate.forward=1;
+  updateCarMotion();
+
+ /*
   ultraInit();
   servoInit();
   trackModeInit();
@@ -167,31 +173,31 @@ int main(int argc, char *argv[])
     perror("ERROR opening socket");
     exit(1);
   }
-  /* Initialize socket structure */
+  
+  
   bzero((char *) &serv_addr, sizeof(serv_addr));
   portno = 2001;
   serv_addr.sin_family = AF_INET;
   serv_addr.sin_addr.s_addr = INADDR_ANY;
   serv_addr.sin_port = htons(portno);
 
-  /*Add support port reuse*/
+
     if ((setsockopt(sockfd, SOL_SOCKET, SO_REUSEADDR, &on, sizeof(on))) < 0)
     {
       perror("setsockopt failed");
       exit(EXIT_FAILURE);
     }
-    /* Now bind the host address using bind() call.*/
+    
     if (bind(sockfd, (struct sockaddr *) &serv_addr, sizeof(serv_addr)) < 0) {
       perror("ERROR on binding");
       exit(1);
     }
  
-    /* Add support reconnection */
+    
+    
   sa.sa_handler = SIG_IGN;
   sigaction( SIGPIPE, &sa, 0 );
-  /* Now start listening for the clients, here process will
-    go in sleep mode and will wait for the incoming connection
-  */
+  
   while (1) {
     listen(sockfd, 5);
     clilen = sizeof(cli_addr);
@@ -200,13 +206,13 @@ int main(int argc, char *argv[])
     clearFlag();
     stop();
     BEEP_OPEN();
-    /* Accept actual connection from the client */
+    
     newsockfd = accept(sockfd, (struct sockaddr *)&cli_addr, (void *) &clilen);
     if (newsockfd < 0) {
       perror("ERROR on accept");
       //exit(1);
     }
-    /* If connection is established then start communicating */
+    
     printf("connect successfully\r\n");
 
     sleep(0.5);
@@ -279,6 +285,7 @@ int main(int argc, char *argv[])
   client_Connected = 0;
   close(sockfd);
   printf("ERROR\r\n");
+  */
   return 0;
 }
 
