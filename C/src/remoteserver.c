@@ -161,7 +161,8 @@ int main(int argc, char *argv[])
   myPWMInit();
   GRBInit();
 
-  for(int i = 0;i<10; i++){
+  while(1)//for(int i = 0;i<10; i++)
+  {
     updateCarState(1);
     updateCarMotion();
     sleep(1);
