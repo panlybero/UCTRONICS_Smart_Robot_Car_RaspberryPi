@@ -199,7 +199,7 @@ int main(int argc, char *argv[])
       exit(EXIT_FAILURE); 
   } 
     
-  int len, n; 
+  int len;
 
   len = sizeof(cliaddr);  //len is value/resuslt 
 
