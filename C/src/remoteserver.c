@@ -164,7 +164,7 @@ int main(int argc, char *argv[])
   for(int i = 0;i<10; i++){
     updateCarState(1);
     updateCarMotion();
-    sleep(1)
+    sleep(1);
   }
   
   
