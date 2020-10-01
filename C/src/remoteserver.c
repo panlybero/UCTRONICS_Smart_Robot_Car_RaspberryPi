@@ -148,7 +148,7 @@ int main(int argc, char *argv[])
   if (ControllerInit() < 0) return -1;
 
   setup_io();
-  /*
+  
   myPWMInit();
   ultraInit();
   servoInit();
@@ -158,11 +158,14 @@ int main(int argc, char *argv[])
   myPWMInit();
   GRBInit();
 
-  updateCarState(1);
-  updateCarMotion();
-  sleep(1);
-  */
- 
+  while(1){
+    updateCarState(1);
+    updateCarMotion();
+    sleep(1);
+  }
+  
+  
+ /*
   ultraInit();
   servoInit();
   trackModeInit();
@@ -295,7 +298,7 @@ int main(int argc, char *argv[])
   client_Connected = 0;
   close(sockfd);
   printf("ERROR\r\n");
-  
+  */
   return 0;
 }
 
