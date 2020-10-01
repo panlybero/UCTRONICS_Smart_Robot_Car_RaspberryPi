@@ -151,7 +151,7 @@ int main(int argc, char *argv[])
   if (ControllerInit() < 0) return -1;
 
   setup_io();
-  
+  /*
   ultraInit();
   servoInit();
   trackModeInit();
@@ -159,7 +159,7 @@ int main(int argc, char *argv[])
   irInit();
   myPWMInit();
   GRBInit();
-  
+  */
 
   for(int i = 0;i<10; i++)
   {
