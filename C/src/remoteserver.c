@@ -713,12 +713,12 @@ int updateCarState(char command) {
   switch (command) {
     case 0: /* left */
       carstate.left = 1;
-      GRB_work(3, receive_colour_table[2], getBrightness);
+      //GRB_work(3, receive_colour_table[2], getBrightness);
       break;
     case 1: /* up */
       if (!disWarning) {
         carstate.forward = 1;
-        GRB_work(3, receive_colour_table[0], getBrightness);
+        //GRB_work(3, receive_colour_table[0], getBrightness);
       }
     else
       carstate.forward = 0;
@@ -727,13 +727,13 @@ int updateCarState(char command) {
       break;
     case 2: /* right */
       carstate.right = 1;
-      GRB_work(3, receive_colour_table[3], getBrightness);
+      //GRB_work(3, receive_colour_table[3], getBrightness);
       carstate.trackenable = 0;
       carstate.autoAvoid = 0;
       break;
     case 3: /* down */
       carstate.back = 1;
-      GRB_work(3, receive_colour_table[1], getBrightness);
+      //GRB_work(3, receive_colour_table[1], getBrightness);
       carstate.trackenable = 0;
       carstate.autoAvoid = 0;
       break;
