@@ -148,7 +148,14 @@ int main(int argc, char *argv[])
   if (ControllerInit() < 0) return -1;
   setup_io();
   myPWMInit();
-
+  ultraInit();
+  servoInit();
+  trackModeInit();
+  beepInit();
+  irInit();
+  myPWMInit();
+  GRBInit();
+  
   carstate.forward=1;
   updateCarMotion();
   sleep(1);
