@@ -160,16 +160,16 @@ int main(int argc, char *argv[])
   irInit();
   myPWMInit();
   GRBInit();
-
+/*
   while(1)//for(int i = 0;i<10; i++)
   {
     updateCarState(1);
     updateCarMotion();
     sleep(1);
   }
+  */
   
-  
- /*
+ 
   ultraInit();
   servoInit();
   trackModeInit();
@@ -302,7 +302,7 @@ int main(int argc, char *argv[])
   client_Connected = 0;
   close(sockfd);
   printf("ERROR\r\n");
-  */
+  
   return 0;
 }
 
