@@ -49,6 +49,9 @@ int sockfd, newsockfd, portno, clilen;
 unsigned char client_Connected = 0;
 unsigned char count;
 
+
+
+
 #define BLOCK_SIZE (4*1024)
 
 #define ARRAY_SIZE(stuff)       (sizeof(stuff) / sizeof(stuff[0]))
@@ -158,10 +161,10 @@ int main(int argc, char *argv[])
   myPWMInit();
   GRBInit();
 
-  while(1){
+  for(int i = 0;i<10000; i++){
     updateCarState(1);
     updateCarMotion();
-    sleep(1);
+
   }
   
   
