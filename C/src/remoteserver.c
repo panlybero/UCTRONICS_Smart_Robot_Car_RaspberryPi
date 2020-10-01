@@ -159,14 +159,15 @@ int main(int argc, char *argv[])
   irInit();
   myPWMInit();
   GRBInit();
-  stop();
+  
 
-  while(0)//for(int i = 0;i<10; i++)
+  for(int i = 0;i<10; i++)
   {
     updateCarState(1);
     updateCarMotion();
     sleep(1);
   }
+  stop();
   /*
   
  
