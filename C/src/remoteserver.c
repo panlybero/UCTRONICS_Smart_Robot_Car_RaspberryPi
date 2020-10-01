@@ -147,10 +147,11 @@ int main(int argc, char *argv[])
   /* Initialise GPIO */
   if (ControllerInit() < 0) return -1;
   setup_io();
-
+  myPWMInit();
 
   carstate.forward=1;
   updateCarMotion();
+  sleep(1);
 
  /*
   ultraInit();
