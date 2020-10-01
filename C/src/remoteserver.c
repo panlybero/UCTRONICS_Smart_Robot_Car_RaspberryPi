@@ -146,7 +146,7 @@ int PhaseScratchCmd(char command);
 int main(int argc, char *argv[])
 {
   usleep(10);
-  char buffer[BUFFER_SIZE]; 
+  //char buffer[BUFFER_SIZE]; 
   struct sockaddr_in serv_addr, cli_addr;
     struct sigaction sa;
   int  n, pulsenum, count ;
