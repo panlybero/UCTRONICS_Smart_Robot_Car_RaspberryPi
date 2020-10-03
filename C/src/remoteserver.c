@@ -217,8 +217,8 @@ int main(int argc, char *argv[])
 
     }else if (buffer[0]=='x'){
       stop();
-
     }
+    sleep(0.01);
   }
  
   
