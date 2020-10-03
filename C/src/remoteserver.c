@@ -207,9 +207,14 @@ int main(int argc, char *argv[])
     printf("Client : %s\n", buffer); 
     if(buffer[0]=='w'){
       
-        go_forward();
-       
+        updateCarState(1);
+        updateCarMotion();
       
+      
+    }else if (buffer[0]=='s'){
+        updateCarState(3)
+        updateCarMotion();
+
     }else if (buffer[0]=='x'){
       stop();
 
