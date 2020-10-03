@@ -164,7 +164,7 @@ int main(int argc, char *argv[])
   myPWMInit();
   //ultraInit();
   //servoInit();
-  //trackModeInit();
+  trackModeInit();
   //beepInit();
   //irInit();
   //GRBInit();
