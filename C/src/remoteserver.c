@@ -225,10 +225,10 @@ int main(int argc, char *argv[])
       }
 
     }else if (buffer[0]=='x'){
-      updateCarState(5);
-      updateCarMotion();
+      //updateCarState(5);
+      //updateCarMotion();
     }
-    sleep(0.01);
+    //sleep(0.01);
   }
  
   
