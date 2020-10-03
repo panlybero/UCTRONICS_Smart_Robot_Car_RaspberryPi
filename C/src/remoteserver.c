@@ -161,13 +161,13 @@ int main(int argc, char *argv[])
   if (ControllerInit() < 0) return -1;
 
   setup_io();
-  
-/*
+  myPWMInit();
+
 
   
 
   int sockfd; 
-  char buffer[MAXLINE]; 
+  //char buffer[MAXLINE]; 
   char *hello = "Hello from server"; 
   struct sockaddr_in servaddr, cliaddr; 
     
@@ -220,10 +220,10 @@ int main(int argc, char *argv[])
 
     }
   }
- */
-  
-  
  
+  
+  
+ /*
   ultraInit();
   servoInit();
   trackModeInit();
@@ -356,7 +356,7 @@ int main(int argc, char *argv[])
   client_Connected = 0;
   close(sockfd);
   printf("ERROR\r\n");
-  
+  */
   return 0;
 }
 
