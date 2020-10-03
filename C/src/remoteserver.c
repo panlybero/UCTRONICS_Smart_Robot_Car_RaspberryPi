@@ -205,12 +205,12 @@ int main(int argc, char *argv[])
     buffer[n] = '\0'; 
     printf("Client : %s\n", buffer); 
     if(buffer[0]=='w'){
-      for(int i = 0;i<5; i++)
-      {
+      //for(int i = 0;i<5; i++)
+      //{
         updateCarState(1);
         updateCarMotion();
-        sleep(0.5);
-      }
+        //sleep(0.5);
+      //}
       
     }else if (buffer[0]=='x'){
       stop();
