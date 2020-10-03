@@ -196,7 +196,9 @@ int main(int argc, char *argv[])
   len = sizeof(cliaddr);  //len is value/resuslt 
   //updateCarState(5);
   //updateCarMotion();
-
+  clearFlag();
+  stop();
+  BEEP_OPEN();
   while(1){
     n = recvfrom(sockfd, (char *)buffer, MAXLINE,  
               MSG_WAITALL, ( struct sockaddr *) &cliaddr, 
