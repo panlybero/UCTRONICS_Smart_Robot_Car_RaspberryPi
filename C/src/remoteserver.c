@@ -167,10 +167,10 @@ int main(int argc, char *argv[])
   //trackModeInit();
   //beepInit();
   //irInit();
-  GRBInit();
+  //GRBInit();
   pthread_t t1, t2;
   //creat two thread
-  //pthread_create(&t1, NULL, fun1, NULL);
+  pthread_create(&t1, NULL, fun1, NULL);
   //pthread_create(&t2, NULL, fun2, NULL);
 
   int sockfd; 
