@@ -206,14 +206,20 @@ int main(int argc, char *argv[])
     buffer[n] = '\0'; 
     printf("Client : %s\n", buffer); 
     if(buffer[0]=='w'){
-      
-        updateCarState(1);
-        updateCarMotion();
+      for (int i=0;i<5;i++)
+      {
+          updateCarState(1);
+          updateCarMotion();
+      }
+        
       
       
     }else if (buffer[0]=='s'){
-        updateCarState(3);
-        updateCarMotion();
+      for (int i=0;i<5;i++)
+      {
+          updateCarState(3);
+          updateCarMotion();
+      }
 
     }else if (buffer[0]=='x'){
       stop();
