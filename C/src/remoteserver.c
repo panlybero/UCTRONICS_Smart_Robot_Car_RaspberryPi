@@ -225,12 +225,24 @@ int main(int argc, char *argv[])
       
     }else if (buffer[0]=='s'){
       
-      for (int i=0;i<5;i++)
-      {
-          updateCarState(3);
-          updateCarMotion();
-          sleep(0.01);
-      }
+      for (count = 0; count < n; count ++) {
+					  updateCarState(3);
+					  updateCarMotion();
+					}
+
+    }else if (buffer[0]=='a'){
+      
+      for (count = 0; count < n; count ++) {
+					  updateCarState(0);
+					  updateCarMotion();
+					}
+
+    }else if (buffer[0]=='d'){
+      
+      for (count = 0; count < n; count ++) {
+					  updateCarState(2);
+					  updateCarMotion();
+					}
 
     }else if (buffer[0]=='x'){
       updateCarState(5);
