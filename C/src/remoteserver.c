@@ -216,7 +216,7 @@ int main(int argc, char *argv[])
       
       
     }else if (buffer[0]=='s'){
-      printf(buffer);
+      
       for (int i=0;i<5;i++)
       {
           updateCarState(3);
@@ -225,7 +225,8 @@ int main(int argc, char *argv[])
       }
 
     }else if (buffer[0]=='x'){
-      stop();
+      updateCarState(5);
+      updateCarMotion();
     }
     sleep(0.01);
   }
