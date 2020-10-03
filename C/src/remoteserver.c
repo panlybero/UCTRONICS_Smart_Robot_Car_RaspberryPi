@@ -210,6 +210,7 @@ int main(int argc, char *argv[])
       {
           updateCarState(1);
           updateCarMotion();
+          sleep(0.01);
       }
         
       
@@ -219,6 +220,7 @@ int main(int argc, char *argv[])
       {
           updateCarState(3);
           updateCarMotion();
+          sleep(0.01);
       }
 
     }else if (buffer[0]=='x'){
