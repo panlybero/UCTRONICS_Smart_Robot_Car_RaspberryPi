@@ -212,7 +212,7 @@ int main(int argc, char *argv[])
       
       
     }else if (buffer[0]=='s'){
-        updateCarState(3)
+        updateCarState(3);
         updateCarMotion();
 
     }else if (buffer[0]=='x'){
