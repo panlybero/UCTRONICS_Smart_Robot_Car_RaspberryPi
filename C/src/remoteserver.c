@@ -162,13 +162,6 @@ int main(int argc, char *argv[])
 
   setup_io();
   myPWMInit();
-  ultraInit();
-  servoInit();
-  trackModeInit();
-  beepInit();
-  irInit();
-  GRBInit();
-
   
 
   int sockfd; 
@@ -211,12 +204,10 @@ int main(int argc, char *argv[])
     buffer[n] = '\0'; 
     printf("Client : %s\n", buffer); 
     if(buffer[0]=='w'){
-      for (int i=0;i<5;i++)
-      {
-          updateCarState(1);
-          updateCarMotion();
-          sleep(0.01);
-      }
+      for (count = 0; count < n; count ++) {
+					  updateCarState(1);
+					  updateCarMotion();
+					}
         
       
       
