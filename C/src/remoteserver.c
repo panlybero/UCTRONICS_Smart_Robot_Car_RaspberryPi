@@ -199,6 +199,7 @@ int main(int argc, char *argv[])
   clearFlag();
   stop();
   BEEP_OPEN();
+  client_Connected = 1;
   while(1){
     n = recvfrom(sockfd, (char *)buffer, MAXLINE,  
               MSG_WAITALL, ( struct sockaddr *) &cliaddr, 
