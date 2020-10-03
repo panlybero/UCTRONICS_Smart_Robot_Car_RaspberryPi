@@ -208,8 +208,10 @@ int main(int argc, char *argv[])
     if(buffer[0]=='w'){
       for(int i = 0;i<5; i++)
       {
-        updateCarState(1);
-        updateCarMotion();
+        //updateCarState(1);
+        //updateCarMotion();
+        
+        go_forward();
         sleep(0.1);
       }
       
