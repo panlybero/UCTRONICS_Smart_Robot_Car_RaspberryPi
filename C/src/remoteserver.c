@@ -162,10 +162,10 @@ int main(int argc, char *argv[])
 
   setup_io();
   myPWMInit();
-  //ultraInit();
+  ultraInit();
   //servoInit();
   //trackModeInit();
-  //beepInit();
+  beepInit();
   //irInit();
   //GRBInit();
   pthread_t t1, t2;
