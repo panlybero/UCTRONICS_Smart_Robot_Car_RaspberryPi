@@ -162,7 +162,12 @@ int main(int argc, char *argv[])
 
   setup_io();
   myPWMInit();
-
+  ultraInit();
+  servoInit();
+  trackModeInit();
+  beepInit();
+  irInit();
+  GRBInit();
 
   
 
