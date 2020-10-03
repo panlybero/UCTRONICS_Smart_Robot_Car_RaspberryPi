@@ -196,8 +196,8 @@ int main(int argc, char *argv[])
   int len;
 
   len = sizeof(cliaddr);  //len is value/resuslt 
-  updateCarState(5);
-  updateCarMotion();
+  //updateCarState(5);
+  //updateCarMotion();
 
   while(1){
     n = recvfrom(sockfd, (char *)buffer, MAXLINE,  
