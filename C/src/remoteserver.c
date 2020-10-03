@@ -166,7 +166,7 @@ int main(int argc, char *argv[])
   //servoInit();
   //trackModeInit();
   //beepInit();
-  //irInit();
+  irInit();
   //GRBInit();
   pthread_t t1, t2;
   //creat two thread
