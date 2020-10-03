@@ -196,6 +196,8 @@ int main(int argc, char *argv[])
   int len;
 
   len = sizeof(cliaddr);  //len is value/resuslt 
+
+
   while(1){
     n = recvfrom(sockfd, (char *)buffer, MAXLINE,  
               MSG_WAITALL, ( struct sockaddr *) &cliaddr, 
@@ -203,13 +205,16 @@ int main(int argc, char *argv[])
     buffer[n] = '\0'; 
     printf("Client : %s\n", buffer); 
     if(buffer[0]=='w'){
-      for(int i = 0;i<10; i++)
+      for(int i = 0;i<5; i++)
       {
         updateCarState(1);
         updateCarMotion();
-        sleep(0.1);
+        sleep(0.5);
       }
+      
+    }else if (buffer[0]=='x'){
       stop();
+
     }
   }
  
