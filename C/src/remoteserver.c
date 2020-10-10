@@ -164,10 +164,10 @@ int main(int argc, char *argv[])
   myPWMInit();
   //ultraInit();
   //servoInit();
-  //trackModeInit();
-  //beepInit();
-  //irInit();
-  //GRBInit();
+  trackModeInit();
+  beepInit();
+  irInit();
+  GRBInit();
   pthread_t t1, t2;
   //creat two thread
   //pthread_create(&t1, NULL, fun1, NULL);
